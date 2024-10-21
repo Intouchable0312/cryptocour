@@ -25,7 +25,7 @@ body {
     flex-direction: column; /* Les cartes s'empilent en colonne */
     flex: 1; /* Prendre l'espace restant */
     max-height: calc(100vh - 50px); /* Ajuste la hauteur en fonction de la taille de la fenêtre */
-    overflow: hidden; /* Empêche le défilement */
+    overflow: auto; /* Permet le défilement si nécessaire */
 }
 
 /* Titre */
@@ -91,7 +91,7 @@ h1 {
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     height: 600px; /* Hauteur augmentée pour le graphique */
-    width: 100%; /* Prend toute la largeur */
+    width: 70%; /* Réduit la largeur pour laisser plus de place à la liste des cryptos */
     margin-left: 20px; /* Espace entre le graphique et la liste des cryptos */
     flex: 2; /* Donne plus d'espace au graphique */
     margin-top: 100px;
@@ -114,6 +114,7 @@ h1 {
         margin-left: 0; /* Supprime l'espace à gauche */
         margin-top: 20px; /* Réduit l'espace supérieur */
         height: 300px; /* Réduit la hauteur pour les petits écrans */
+        width: 100%; /* Prend toute la largeur */
     }
 
     /* Grille des cryptos pour petits écrans */
