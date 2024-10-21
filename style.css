@@ -25,7 +25,7 @@ body {
     flex-direction: column; /* Les cartes s'empilent en colonne */
     flex: 1; /* Prendre l'espace restant */
     max-height: calc(100vh - 50px); /* Ajuste la hauteur en fonction de la taille de la fenêtre */
-    overflow: auto; /* Permet le défilement si nécessaire */
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
 /* Titre */
@@ -154,5 +154,29 @@ h1 {
     /* Grille des cryptos pour très petits écrans */
     .crypto-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur très petits écrans */
+    }
+}
+/* Style du footer */
+footer {
+    background-color: #252a41; /* Couleur de fond pour le footer */
+    color: #f4f4f9; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Espacement interne */
+    position: relative; /* Position relative pour le placer correctement */
+    bottom: 0; /* Positionné en bas de la page */
+    width: 100%; /* Prend toute la largeur */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Ombre en haut du footer */
+}
+
+/* Styles pour petits écrans */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; /* Réduit le padding sur petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px; /* Réduit encore le padding pour très petits écrans */
     }
 }
