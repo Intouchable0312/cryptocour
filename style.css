@@ -40,7 +40,7 @@ h1 {
 /* Grille des cryptos */
 .crypto-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 colonnes de largeur égale */
+    grid-template-columns: repeat(6, 1fr); /* 6 colonnes de largeur égale par défaut */
     gap: 10px; /* Espace entre les cartes */
 }
 
@@ -116,9 +116,9 @@ h1 {
         height: 300px; /* Réduit la hauteur pour les petits écrans */
     }
 
-    /* Grille des cryptos */
+    /* Grille des cryptos pour petits écrans */
     .crypto-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur petit écran */
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur petit écran */
     }
 
     /* Ajuste les tailles des éléments */
@@ -148,5 +148,10 @@ h1 {
 
     .tradingview-container {
         height: 200px; /* Réduit encore la hauteur pour très petits écrans */
+    }
+
+    /* Grille des cryptos pour très petits écrans */
+    .crypto-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur très petits écrans */
     }
 }
