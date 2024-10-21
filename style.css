@@ -1,0 +1,152 @@
+/* Styles globaux */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f;
+    color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 2400px; /* Largeur maximale */
+    margin: 50px auto;
+    background-color: #252a41;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    display: flex; /* Flexbox pour aligner les éléments */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+}
+
+/* Section gauche : liste des cryptos */
+.crypto-list {
+    display: flex; /* Utiliser flex pour la disposition */
+    flex-direction: column; /* Les cartes s'empilent en colonne */
+    flex: 1; /* Prendre l'espace restant */
+    max-height: calc(100vh - 50px); /* Ajuste la hauteur en fonction de la taille de la fenêtre */
+    overflow: hidden; /* Empêche le défilement */
+}
+
+/* Titre */
+h1 {
+    text-align: left; /* Aligné à gauche */
+    font-size: 2em;
+    color: #50b6ff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Grille des cryptos */
+.crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 colonnes de largeur égale */
+    gap: 10px; /* Espace entre les cartes */
+}
+
+/* Chaque carte crypto */
+.crypto-item {
+    background-color: #2d3248;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Interaction au survol */
+.crypto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Logo des cryptos */
+.crypto-logo {
+    width: 70px; /* Ajuste la taille du logo */
+    height: 70px; /* Ajuste la taille du logo */
+    margin-bottom: 15px;
+}
+
+/* Style des titres des cryptos */
+.crypto-item h2 {
+    margin: 0;
+    font-size: 1.1em; /* Taille de police réduite pour plus de texte */
+    color: #ffffff;
+    margin-bottom: 10px; /* Moins d'espace en bas */
+}
+
+/* Style des prix */
+.crypto-item p {
+    margin: 0;
+    font-size: 1.3em; /* Taille de police réduite pour plus de texte */
+    color: #50b6ff;
+    font-weight: bold;
+}
+
+/* Section droite : graphique TradingView */
+.tradingview-container {
+    background-color: #2a2f47;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 600px; /* Hauteur augmentée pour le graphique */
+    width: 100%; /* Prend toute la largeur */
+    margin-left: 20px; /* Espace entre le graphique et la liste des cryptos */
+    flex: 2; /* Donne plus d'espace au graphique */
+    margin-top: 100px;
+}
+
+/* Ajuste le widget pour qu'il prenne toute la hauteur du conteneur */
+.tradingview-widget-container__widget {
+    height: 100%; /* Prend toute la hauteur du conteneur */
+    width: 100%; /* Prend toute la largeur */
+}
+
+/* Styles pour petits écrans */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Passe en colonne sur petit écran */
+        margin: 20px; /* Réduit la marge */
+    }
+
+    .tradingview-container {
+        margin-left: 0; /* Supprime l'espace à gauche */
+        margin-top: 20px; /* Réduit l'espace supérieur */
+        height: 300px; /* Réduit la hauteur pour les petits écrans */
+    }
+
+    /* Grille des cryptos */
+    .crypto-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur petit écran */
+    }
+
+    /* Ajuste les tailles des éléments */
+    .crypto-item h2 {
+        font-size: 1em; /* Réduit la taille de police */
+    }
+
+    .crypto-item p {
+        font-size: 1.1em; /* Réduit la taille de police */
+    }
+}
+
+/* Styles pour très petits écrans */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Réduit encore plus la taille du titre */
+    }
+
+    .crypto-item {
+        padding: 10px; /* Réduit le padding */
+    }
+
+    .crypto-logo {
+        width: 50px; /* Ajuste la taille du logo */
+        height: 50px; /* Ajuste la taille du logo */
+    }
+
+    .tradingview-container {
+        height: 200px; /* Réduit encore la hauteur pour très petits écrans */
+    }
+}
